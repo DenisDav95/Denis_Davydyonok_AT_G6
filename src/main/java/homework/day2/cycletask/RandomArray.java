@@ -11,7 +11,7 @@ public class RandomArray {
     public void createArray(){
 
         for (int i = 0; i <= array.length - 1; i++) {
-            array[i] = random.nextInt(7);
+            array[i] = random.nextInt();
         }
     }
 
