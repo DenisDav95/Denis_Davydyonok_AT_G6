@@ -8,7 +8,7 @@ public class CycleTaskRunner {
         NumLineFor output2 = new NumLineFor();
         RandomArray output3 = new RandomArray();
 
-        System.out.println("Строка чисел от 0 до 20");
+        System.out.println("Тут строка чисел от 0 до 20");
         output1.printNumLine();
         System.out.println(" ");
         System.out.println("Строка нечетных чисел от 3 до 19");
