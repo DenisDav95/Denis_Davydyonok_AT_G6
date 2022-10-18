@@ -12,6 +12,7 @@ public class ArraysRunner {
         myArray.sumArray(testArray,3);
         System.out.println(Arrays.toString(myArray.newArray(testArray,5)));
         System.out.println(myArray.sumArrayDate(testArray));
+        myArray.print();
 
 
     }
