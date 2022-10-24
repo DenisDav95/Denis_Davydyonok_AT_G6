@@ -6,7 +6,6 @@ public class GenericContainerRunner {
 
         GenericContainer<Integer> container = new GenericContainer<>();
 
-
 //        for (int i = 0; i < 10; i++) {
 //            container.add(i);
 //        }
