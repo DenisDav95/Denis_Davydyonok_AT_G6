@@ -2,8 +2,6 @@ package homework.day6;
 
 public class FindNumber {
 
-//    1.3 сделать метод, который позволяет найти в тексте все цифры и преобразовать их в массив числовых переменных, вывести все элементы массива в косоль, текст получает на вход в виде аргумента
-
     public void findNumber(String text) {
 
         String[] sybmols = text.split("");
@@ -23,7 +21,6 @@ public class FindNumber {
         String[] strNumbersArray = numbersInText.split("");
 
         for (int i = 0; i < intNumbersArray.length; i++) {
-
             intNumbersArray[i] = Integer.parseInt(strNumbersArray[i]);
             System.out.println(intNumbersArray[i]);
         }

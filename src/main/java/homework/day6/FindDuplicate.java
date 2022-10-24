@@ -6,7 +6,6 @@ public class FindDuplicate {
 
     public void findDuplicate(String text) {
 
-//        1.2 сделать метод, который позволяет найти и вывести в консоль все дубликаты слов в строке текста, который принимает на вход в виде аргумента.
         String[] words = text.split("[^A-Za-zА-Яа-я]+");
         ArrayList<String> duplicate = new ArrayList<>();
 
