@@ -15,8 +15,8 @@ public class Figures {
         BufferedWriter logs = new BufferedWriter(new FileWriter("figures.txt"));
 
         for (String i : figures) {
-            logs.newLine();
             logs.write("-" + i);
+            logs.newLine();
         }
         logs.close();
 
