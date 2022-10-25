@@ -1,4 +1,4 @@
-package homework.day8.Objects;
+package homework.day8;
 
 import java.util.ArrayList;
 import java.util.List;
