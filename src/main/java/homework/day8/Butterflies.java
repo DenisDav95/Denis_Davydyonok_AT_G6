@@ -36,5 +36,4 @@ public class Butterflies {
             System.out.println(i);
         }
     }
-
 }

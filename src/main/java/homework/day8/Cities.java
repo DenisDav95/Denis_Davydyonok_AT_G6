@@ -26,7 +26,5 @@ public class Cities {
         for (int i = 0; i < cities.size(); i++) {
             System.out.printf(cities.get(i) + " ");
         }
-
     }
-
 }

@@ -4,14 +4,22 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Cars {
 
     public static void main(String[] args) throws IOException {
 
-        List<String> cars = new ArrayList<>(Arrays.asList("Мерс", "Ауди", "Жигуль", "Рено", "Жигуль", "Жигуль", "Ауди"));
+        List<String> cars = new ArrayList<>();
+
+        cars.add("Мерс");
+        cars.add("Ауди");
+        cars.add("Жигуль");
+        cars.add("Рено");
+        cars.add("Жигуль");
+        cars.add("Жигуль");
+        cars.add("Ауди");
+
         BufferedWriter logs = new BufferedWriter(new FileWriter("cars.txt"));
 
         for (String i : cars) {
@@ -29,7 +37,5 @@ public class Cars {
         for (String i : cars) {
             System.out.printf(i + " ");
         }
-
     }
-
 }
