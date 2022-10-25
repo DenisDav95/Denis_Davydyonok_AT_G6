@@ -29,8 +29,9 @@ public class Cars {
         logs.close();
 
         for (int i = 0; i < cars.size(); i++) {
-            if (cars.get(i).length() > 4) {
+            if ((cars.get(i).length() > 4)) {
                 cars.remove(i);
+                i--;
             }
         }
 
