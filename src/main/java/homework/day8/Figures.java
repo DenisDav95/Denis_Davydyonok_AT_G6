@@ -12,12 +12,17 @@ public class Figures {
     public static void main(String[] args) throws IOException {
 
         List<String> figures = new ArrayList<>(Arrays.asList("Овал", "Прямоугольник", "Круг", "Квадрат", "Эллипс"));
+        StringBuilder text = new StringBuilder();
         BufferedWriter logs = new BufferedWriter(new FileWriter("figures.txt"));
 
         for (String i : figures) {
-            logs.newLine();
-            logs.write("-" + i);
+            if (figures.indexOf(i) < figures.size() - 1) {
+                text.append(i + "-");
+            } else {
+                text.append(i);
+            }
         }
+        logs.write(String.valueOf(text));
         logs.close();
 
         int counter = 0;
@@ -33,11 +38,10 @@ public class Figures {
         }
         System.out.println();
 
-        figures.add(2, "Треугольник");
+        figures.add(3, "Треугольник");
 
         for (String i : figures) {
-           System.out.printf(i + " ");
+            System.out.printf(i + " ");
         }
     }
-
 }
