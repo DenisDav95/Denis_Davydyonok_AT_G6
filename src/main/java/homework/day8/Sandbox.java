@@ -35,12 +35,11 @@ public class Sandbox {
         }
 
         for (Integer i : sandMap.keySet()) {
-            System.out.printf(i + " ");
+            System.out.println(i);
         }
-        System.out.println();
 
         for (Sand i : sandMap.values()) {
-            System.out.println(i.toString());
+            System.out.println(i);
         }
 
         for (Map.Entry<Integer, Sand> i : sandMap.entrySet()) {
