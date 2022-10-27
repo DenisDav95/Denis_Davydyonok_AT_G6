@@ -1,18 +1,18 @@
 package project;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SparklingWater extends Water {
 
     private boolean isOpened;
-    private Bubble[] bubbles;
+    private List<Bubble> bubbles;
 
     public SparklingWater() {
-//  Не понимаю зачем мы проверяем газировку открыта она или нет
-//  при создании и почему это свойсво газировки, если открытой или
-//  закрытой может быть именно бутылка
         isOpened();
     }
 
-    public void pump(Bubble[] bubbles) {
+    public void pump(List<Bubble> bubbles) {
         System.out.printf("Creating the sparkling water").println();
         this.bubbles = bubbles;
     }
@@ -24,7 +24,7 @@ public class SparklingWater extends Water {
 
     private void isOpened() {
         System.out.printf("Checking if the water is open").println();
-        if (isOpened == true) {
+        if (isOpened) {
             System.out.printf("Water is open").println();
             degas();
         } else {
@@ -35,7 +35,7 @@ public class SparklingWater extends Water {
     private void degas() {
         System.out.printf("Degasing water from the bottle").println();
         int sec = 0;
-        int numberOfBubbles = bubbles.length;
+        int numberOfBubbles = bubbles.size();
         Bubble bubble = new Bubble("Oxygen");
 
         while (numberOfBubbles > 0) {
@@ -44,13 +44,13 @@ public class SparklingWater extends Water {
             isSparkle();
             bubble.cramp();
         }
-        bubbles = new Bubble[0];
+        bubbles = new ArrayList<Bubble>();
         isSparkle();
     }
 
     public boolean isSparkle() {
 
-        if (bubbles.length != 0) {
+        if (bubbles.size() != 0) {
             System.out.println("There are bubbles in the water");
             return true;
         } else {

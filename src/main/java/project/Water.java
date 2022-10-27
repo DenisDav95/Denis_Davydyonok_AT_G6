@@ -38,5 +38,4 @@ public abstract class Water {
     public void setTemperature(int temperature) {
         this.temperature = temperature;
     }
-
 }
