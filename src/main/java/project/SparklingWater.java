@@ -34,18 +34,11 @@ public class SparklingWater extends Water {
 
     private void degas() {
         System.out.printf("Degasing water from the bottle").println();
-        int sec = 0;
-        int numberOfBubbles = bubbles.size();
-        Bubble bubble = new Bubble("Oxygen");
-
-        while (numberOfBubbles > 0) {
-            numberOfBubbles = numberOfBubbles - (10 + 5 * getTemperature());
-            sec += 1;
+        for (Bubble i : bubbles) {
+            i.cramp();
+            bubbles.remove(i);
             isSparkle();
-            bubble.cramp();
         }
-        bubbles = new ArrayList<Bubble>();
-        isSparkle();
     }
 
     public boolean isSparkle() {
