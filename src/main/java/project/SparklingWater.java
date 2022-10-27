@@ -1,6 +1,5 @@
 package project;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SparklingWater extends Water {
@@ -34,21 +33,19 @@ public class SparklingWater extends Water {
 
     private void degas() {
         System.out.printf("Degasing water from the bottle").println();
-        for (Bubble i : bubbles) {
-            i.cramp();
-            bubbles.remove(i);
-            isSparkle();
+        while (bubbles.size() != 0) {
+            bubbles.get(0).cramp();
+            bubbles.remove(0);
+            if (isSparkle()) {
+                System.out.println("There are bubbles in the water");
+            } else {
+                System.out.println("There are no bubbles in the water");
+            }
         }
+        isSparkle();
     }
 
     public boolean isSparkle() {
-
-        if (bubbles.size() != 0) {
-            System.out.println("There are bubbles in the water");
-            return true;
-        } else {
-            System.out.println("There are no bubbles in the water");
-            return false;
-        }
+        return !bubbles.isEmpty();
     }
 }
