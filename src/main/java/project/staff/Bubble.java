@@ -1,8 +1,8 @@
-package project;
+package project.staff;
 
 public class Bubble {
 
-    private double volume = 0.3F;
+    private double volume = 0.3;
     private String gas;
 
     public Bubble(String gas) {
