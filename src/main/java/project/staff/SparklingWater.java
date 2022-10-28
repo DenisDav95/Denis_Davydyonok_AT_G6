@@ -1,4 +1,4 @@
-package project;
+package project.staff;
 
 import java.util.List;
 

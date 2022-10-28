@@ -1,4 +1,4 @@
-package project;
+package project.staff;
 
 public class Bubble {
 

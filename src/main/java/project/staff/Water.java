@@ -1,11 +1,16 @@
-package project;
+package project.staff;
 
-public abstract class Water {
+public abstract class Water implements Transformable {
 
     private String color = "no";
     private String transparency = "transparent";
     private String smell = "no";
     private int temperature = 0;
+
+    @Override
+    public void mix() {
+
+    }
 
     public String getColor() {
         return color;
