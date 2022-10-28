@@ -42,7 +42,6 @@ public class SparklingWater extends Water {
                 System.out.println("There are no bubbles in the water");
             }
         }
-        isSparkle();
     }
 
     public boolean isSparkle() {
