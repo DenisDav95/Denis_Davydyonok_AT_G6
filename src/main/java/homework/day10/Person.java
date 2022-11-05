@@ -1,0 +1,53 @@
+package homework.day10;
+
+import java.util.Random;
+
+public class Person {
+
+    private String name;
+    private String surname;
+    private int age;
+
+    public Person(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public static int getRandomAge(int min, int max) {
+        Random randomAge = new Random();
+        return randomAge.nextInt(max - min) + min;
+    }
+}
