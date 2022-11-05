@@ -25,7 +25,7 @@ public class MyFileReader {
         System.out.println(file.stream()
                 .skip(4)
                 .filter(i -> i.startsWith("Date log:"))
-                .map(i -> i.substring(0, 20))
+                .map(i -> i.substring(0, 19))
                 .map(i -> i + " " + new Date())
                 .collect(Collectors.joining("<br>")));
     }
