@@ -5,7 +5,7 @@ import homework.day12.Mouse;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SevenChildThreads {
+public class SixChildThreads {
 
     private static List<Mouse> mouses = new ArrayList<>();
 
@@ -13,7 +13,7 @@ public class SevenChildThreads {
 
         Object lock = new Object();
 
-        for (int j = 0; j < 380; j++) {
+        for (int j = 0; j < 420; j++) {
             mouses.add(new Mouse(j));
         }
 
@@ -53,29 +53,22 @@ public class SevenChildThreads {
             }
         });
 
-        Thread t7 = new Thread(() -> {
-            synchronized (lock) {
-                deleteMouse();
-            }
-        });
-
         t1.start();
         t2.start();
         t3.start();
         t4.start();
         t5.start();
         t6.start();
-        t7.start();
     }
 
     private static void deleteMouse() {
         for (int i = 0; i < mouses.size(); i++) {
-            if (Integer.parseInt(mouses.get(i).getName().replace("Mouse ", "")) % 2 != 0) {
+            if (Integer.parseInt(mouses.get(i).getName().replace("Mouse ", "")) % 2 == 0) {
                 mouses.get(i).peep();
                 mouses.remove(i);
                 i--;
                 try {
-                    Thread.sleep(250);
+                    Thread.sleep(170);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
