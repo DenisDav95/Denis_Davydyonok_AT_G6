@@ -6,7 +6,7 @@ public class Hedgehog {
     private String name;
 
     public Hedgehog(int number) {
-        this.name = "Hedgehog" + " " + number;
+        this.name = "Hedgehog " + number;
     }
 
     public void tellMe() {
