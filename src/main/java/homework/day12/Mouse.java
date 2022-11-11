@@ -6,7 +6,7 @@ public class Mouse {
     private String name;
 
     public Mouse(int number) {
-        this.name = "Mouse" + " " + number;
+        this.name = "Mouse " + number;
     }
 
     public void peep() {
