@@ -1,6 +1,6 @@
-package project.container.vessel;
+package project.vessel;
 
-import project.container.material.Material;
+import project.material.Material;
 
 public abstract class Vessel {
 
@@ -9,10 +9,10 @@ public abstract class Vessel {
     private int weight;
     private Material material;
 
-    public Vessel(double volume, double diameter, int weight, Material material) {
+    public Vessel(double volume, double diameter, Material material) {
         this.volume = volume;
         this.diameter = diameter;
-        this.weight = weight;
+        this.weight =  (int) (material.getDensity() * volume / 4);
         this.material = material;
     }
 
