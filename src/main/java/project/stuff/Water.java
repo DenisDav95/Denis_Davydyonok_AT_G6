@@ -1,15 +1,15 @@
-package project.staff;
+package project.stuff;
 
 public abstract class Water implements Transformable {
 
     private String color = "no";
-    private String transparency = "transparent";
+//  private String transparency = "transparent";
     private String smell = "no";
     private int temperature = 0;
 
     @Override
-    public void mix() {
-
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
     }
 
     public String getColor() {
@@ -20,13 +20,13 @@ public abstract class Water implements Transformable {
         this.color = color;
     }
 
-    public String getTransparency() {
-        return transparency;
-    }
+//    public String getTransparency() {
+//        return transparency;
+//    }
 
-    public void setTransparency(String transparency) {
-        this.transparency = transparency;
-    }
+//    public void setTransparency(String transparency) {
+//        this.transparency = transparency;
+//    }
 
     public String getSmell() {
         return smell;
@@ -38,9 +38,5 @@ public abstract class Water implements Transformable {
 
     public int getTemperature() {
         return temperature;
-    }
-
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
     }
 }

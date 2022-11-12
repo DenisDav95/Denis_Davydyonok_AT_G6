@@ -1,6 +1,6 @@
-package project.container.vessel;
+package project.vessel;
 
-import project.staff.Transformable;
+import project.stuff.Transformable;
 
 public interface Containable {
 
@@ -14,11 +14,13 @@ public interface Containable {
     boolean isEmpty();
 
     // returns an integer value of free millilitres
-    int getFreeSpace();
+//    int getFreeSpace();
 
     // forces Containable to be opened
     void open();
 
     // forces Containable to be closed
-    void close();
+//    void close();
+
+    void warm(int temperature);
 }
