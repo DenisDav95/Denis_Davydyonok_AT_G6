@@ -31,28 +31,23 @@ public class Bottle extends Vessel implements Containable {
 
     }
 
-    @Override
     public void addStuff(Transformable stuff) {
         this.stuff = stuff;
     }
 
-    @Override
     public Transformable removeStuff() {
         return stuff;
     }
 
-    @Override
     public boolean isEmpty() {
         return false;
     }
 
-    @Override
     public void open() {
         System.out.printf("Open the bottle").println();
         water.setOpened();
     }
 
-    @Override
     public void warm(int temperature) {
         System.out.printf("Warming stuff to: %s", temperature).println();
         water.setTemperature(temperature);

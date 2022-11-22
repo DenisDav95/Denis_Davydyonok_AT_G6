@@ -26,5 +26,4 @@ public enum Material {
     public double getDensity() {
         return density;
     }
-
 }

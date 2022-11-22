@@ -11,27 +11,22 @@ public class Cup extends Vessel implements Containable {
         super(volume, 8.0, material);
     }
 
-    @Override
     public void addStuff(Transformable stuff) {
         this.stuff = stuff;
     }
 
-    @Override
     public Transformable removeStuff() {
         return stuff;
     }
 
-    @Override
     public boolean isEmpty() {
         return false;
     }
 
-    @Override
     public void open() {
 
     }
 
-    @Override
     public void warm(int temperature) {
         stuff.setTemperature(temperature);
     }
