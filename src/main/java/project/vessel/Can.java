@@ -13,23 +13,18 @@ public class Can extends Vessel implements Containable {
 
     @Override
     public void addStuff(Transformable stuff) {
-
+        this.stuff = stuff;
     }
 
     @Override
     public Transformable removeStuff() {
-        return null;
+        return stuff;
     }
 
     @Override
     public boolean isEmpty() {
         return false;
     }
-
-//    @Override
-//    public int getFreeSpace() {
-//        return 0;
-//    }
 
     @Override
     public void open() {
@@ -40,8 +35,4 @@ public class Can extends Vessel implements Containable {
     public void warm(int temperature) {
         stuff.setTemperature(temperature);
     }
-
-//    @Override
-//    public void close() {
-//    }
 }
