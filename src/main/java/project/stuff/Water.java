@@ -3,7 +3,6 @@ package project.stuff;
 public abstract class Water implements Transformable {
 
     private String color = "no";
-//  private String transparency = "transparent";
     private String smell = "no";
     private int temperature = 0;
 
@@ -19,14 +18,6 @@ public abstract class Water implements Transformable {
     public void setColor(String color) {
         this.color = color;
     }
-
-//    public String getTransparency() {
-//        return transparency;
-//    }
-
-//    public void setTransparency(String transparency) {
-//        this.transparency = transparency;
-//    }
 
     public String getSmell() {
         return smell;

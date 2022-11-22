@@ -13,14 +13,8 @@ public interface Containable {
     // returns true if there is no stuff inside
     boolean isEmpty();
 
-    // returns an integer value of free millilitres
-//    int getFreeSpace();
-
     // forces Containable to be opened
     void open();
-
-    // forces Containable to be closed
-//    void close();
 
     void warm(int temperature);
 }

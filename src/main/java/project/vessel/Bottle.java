@@ -26,15 +26,19 @@ public class Bottle extends Vessel implements Containable {
         System.out.printf("Created " + getVolume() + " liter sparkling water bottle").println();
     }
 
+    public Bottle() {
+        this(1.0, Material.METAL);
+
+    }
+
     @Override
     public void addStuff(Transformable stuff) {
-
         this.stuff = stuff;
     }
 
     @Override
     public Transformable removeStuff() {
-        return null;
+        return stuff;
     }
 
     @Override
@@ -42,32 +46,16 @@ public class Bottle extends Vessel implements Containable {
         return false;
     }
 
-//    @Override
-//    public int getFreeSpace() {
-//        return 0;
-//    }
-
-//    public void close() {
-//        System.out.printf("Close the bottle").println();
-//        ((SparklingWater) water).setOpened();
-//    }
-
     @Override
     public void open() {
         System.out.printf("Open the bottle").println();
         water.setOpened();
     }
 
+    @Override
     public void warm(int temperature) {
         System.out.printf("Warming stuff to: %s", temperature).println();
         water.setTemperature(temperature);
     }
 
-//    public Water getWater() {
-//        return water;
-//    }
-//
-//    public void setWater(Water water) {
-//        this.water = water;
-//    }
 }

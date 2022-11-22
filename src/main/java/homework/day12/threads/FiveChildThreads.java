@@ -11,39 +11,67 @@ public class FiveChildThreads {
 
     public static void main(String[] args) {
 
-        Object lock = new Object();
-
         for (int j = 0; j < 280; j++) {
             mouses.add(new Mouse(j));
         }
 
         Thread t1 = new Thread(() -> {
-            synchronized (lock) {
+            while (mouses.size() != 0) {
+                System.out.println(1);
                 deleteMouse();
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t2 = new Thread(() -> {
-            synchronized (lock) {
+            while (mouses.size() != 0) {
+                System.out.println(2);
                 deleteMouse();
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t3 = new Thread(() -> {
-            synchronized (lock) {
+            while (mouses.size() != 0) {
+                System.out.println(3);
                 deleteMouse();
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t4 = new Thread(() -> {
-            synchronized (lock) {
+            while (mouses.size() != 0) {
+                System.out.println(4);
                 deleteMouse();
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         Thread t5 = new Thread(() -> {
-            synchronized (lock) {
+            while (mouses.size() != 0) {
+                System.out.println(5);
                 deleteMouse();
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -54,16 +82,11 @@ public class FiveChildThreads {
         t5.start();
     }
 
-    private static void deleteMouse() {
-        for (int i = 0; i < mouses.size(); i++) {
-            mouses.get(i).peep();
-            mouses.remove(i);
-            i--;
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+    private static synchronized void deleteMouse() {
+        try {
+            mouses.get(0).peep();
+            mouses.remove(0);
+        } catch (Exception e) {
         }
     }
 }
